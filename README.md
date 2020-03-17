@@ -1,2 +1,2 @@
 # MovieRatingWEBB
-A movie rating sire build in wordpress (school project)
+A movie rating site build in wordpress (school project)
