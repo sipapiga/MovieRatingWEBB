@@ -1,0 +1,220 @@
+/*
+Theme Name: Twentyseventeen child theme
+Author: Pat Prasopsap
+Description: Child Theme of 2017 for movie rating for wordpress assignment
+Version: 1.0
+Template: twentyseventeen
+Text Domain: Movie rating
+*/
+
+:root {
+
+    /** Colors **/
+    --primary : #FF5B00;
+    --darkGray: #2F2E2E;
+    --lightGray: #EBEBEB;
+ 
+    --white: #ffffff;
+    --black: #000000;
+ }
+ html {
+     box-sizing: border-box;
+   /* Now 10px = 1rem! */
+ }
+ *, *:before, *:after {
+     box-sizing: inherit;
+ }
+
+ /** Headings **/
+ h1, h2, h3 {
+     font-family: var(--mainFont);
+     margin: .5rem 0;
+     line-height: 1.2;
+ }
+ h1 {
+     font-size: 6rem;
+ }
+ h2 {
+     font-size: 4.8rem;
+     color: var(--primary);
+ }
+ h3 {
+     font-size: 3rem;
+     color: var(--primary);
+ }
+ /** Globals **/
+ a {
+     text-decoration: none;
+ }
+ ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+ .container {
+     max-width: 120rem; /** 1200px **/
+     width: 90%;
+     margin: 0 auto;
+ }
+ img {
+     max-width: 100%;
+     height: auto;
+ }
+ /** Utilities **/
+ .text-center {
+     text-align: center;
+ }
+ .text-primary {
+     color: var(--primary);
+ }
+
+ 
+ /*** Classes list **/
+ .movies-list {
+     margin-top: 4rem;
+ }
+ @media (min-width: 768px) {
+     .movies-list,.tag-entry{
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+     }
+ }
+ .card{
+     margin-bottom: 4rem;
+ }
+ @media (min-width: 768px) {
+    .card {
+        flex: 0 0 calc(50% - 2rem);
+        position: relative;
+    }
+ 
+    .gradient::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 0;
+
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.4+80 */
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 80%, rgba(0,0,0,0.4) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 80%,rgba(0,0,0,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 80%,rgba(0,0,0,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
+    }
+
+}
+.card img {
+    display: block;
+}
+.card .card-content {
+    padding: 3rem 0;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .card .card-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        padding: 2rem;
+        text-align: left;
+    }
+}
+.card .card-content a {
+    color: var(--black);
+}
+.card .card-content h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+@media (min-width: 768px) {
+    .card .card-content a {
+        color: var(--white);
+    }
+}
+
+.card .card-content p {
+    color: rgb(245, 230, 230);
+    font-weight: bold;
+    margin: 0;
+}
+.page-content{
+    width: 80%;
+    margin-left: 50px;
+}
+.single-info{
+    font-size: 2rem;
+}
+.entry-summary a, .more-link{
+    text-decoration: none;
+    background-color:var(--primary);
+    padding: 5px;
+    border-radius: 2px;
+    color: var(--white);
+}
+.more-link{
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+.tag-entry p{
+    font-size: 4rem;
+}
+
+.site-header-front {
+    height: 300px;
+    background-color: var(--darkGray);
+
+}
+.site-header-front h4 {
+    padding-top: 10px;
+    font-weight: 700;
+    color: var(--primary);
+}
+.navigation-top{
+    font-size: large;
+}
+.sidebar-movie-list i,.card-content i{
+    color:#fed500;
+}
+.sidebar-class {
+    display: flex;
+    justify-content: space-between;
+  
+}
+/*aEeview theme*/
+.decoration-bar {
+    height: 5px;
+    clear: both;
+    position: relative;
+    box-shadow: 0 1px 1px #000;
+    background: #00A0B0;
+    background: -moz-linear-gradient(left, #00A0B0 0%, #00A0B0 20%, #4ECDC4 20%, #4ECDC4 40%, #EDC951 40%, #EDC951 60%, #FF6B6B 60%, #FF6B6B 80%, #C44D58 80%, #C44D58 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #00A0B0), color-stop(20%, #00A0B0), color-stop(20%, #4ECDC4), color-stop(40%, #4ECDC4), color-stop(40%, #EDC951), color-stop(60%, #EDC951), color-stop(60%, #FF6B6B), color-stop(80%, #FF6B6B), color-stop(80%, #C44D58), color-stop(100%, #C44D58));
+    background: -webkit-linear-gradient(left, #00A0B0 0%, #00A0B0 20%, #4ECDC4 20%, #4ECDC4 40%, #EDC951 40%, #EDC951 60%, #FF6B6B 60%, #FF6B6B 80%, #C44D58 80%, #C44D58 100%);
+    background: -o-linear-gradient(left, #00A0B0 0%, #00A0B0 20%, #4ECDC4 20%, #4ECDC4 40%, #EDC951 40%, #EDC951 60%, #FF6B6B 60%, #FF6B6B 80%, #C44D58 80%, #C44D58 100%);
+    background: -ms-linear-gradient(left, #00A0B0 0%, #00A0B0 20%, #4ECDC4 20%, #4ECDC4 40%, #EDC951 40%, #EDC951 60%, #FF6B6B 60%, #FF6B6B 80%, #C44D58 80%, #C44D58 100%);
+    background: linear-gradient(to right, #00A0B0 0%, #00A0B0 20%, #4ECDC4 20%, #4ECDC4 40%, #EDC951 40%, #EDC951 60%, #FF6B6B 60%, #FF6B6B 80%, #C44D58 80%, #C44D58 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00A0B0', endColorstr='#C44D58', GradientType=1 );
+}
+.latest-info{
+    padding-top: 5px;
+    margin: 20px;
+}
+.latest-info img{
+    width: 150px;
+}
+.page-title,.site-title{
+    font-size: 3.5rem !important;
+    color: var(--primary);
+}
+.widget-font{
+    font-size: 1.5rem !important;
+    color: var(--primary)!important;
+    margin-top: 30px;
+}
